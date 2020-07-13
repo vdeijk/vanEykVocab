@@ -1,0 +1,617 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,300;0,400;1,300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,300;0,400;1,300&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Aleo:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap");
+
+/* General */
+
+body, ul {
+  font-family: 'Aleo', serif;
+    line-height: 130%;
+    background-color:	rgba(60, 59, 110, 0.2);
+}
+
+p {
+display: inline-block;
+}
+
+.a_app {
+  font-size: 24px;
+  text-decoration: none;
+  display: inline-block;
+  color: rgba(178,32,54);
+}
+
+.Dashboard {
+  margin-top: 30px;
+  margin-bottom: 30px;
+  margin-left: 30px;
+  margin-right: 30px;
+  display: flex;
+  justify-content: space-evenly; 
+}
+
+.DashboardMain {
+  flex-basis: 67%;
+  text-align: center;
+  min-height: 300px;
+  margin-left: 15px;
+ 
+  border-radius: 5px;
+  border: solid 1px;
+
+  border-color: #C0C0C0;
+  background: #FDFDFD;
+}
+
+.DashboardSide {
+  height: 650;
+  width: 400px;
+  margin-right: 15px;
+  display: flex;
+  flex-direction: column;
+}
+
+/* DASHBOARD MAIN */
+
+.header {
+  min-height: 280px;
+  background-image: linear-gradient(rgba(178,32,54, 0.8),rgba(178,32,54, 0.8)),  url(newyorkflag.jpg);
+  background-position: center;
+  background-size: cover;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+.headerText {
+  padding-top: 100px;
+  font-size: 92px;
+  color: #FFF;
+  text-transform: uppercase;
+  word-spacing: 2px;  
+  letter-spacing: 0.5px;
+  font-weight: 300; 
+ 
+}
+
+.headerTextTwo {
+  padding-top: 40px;
+  text-transform: uppercase;
+  color: #FFF;
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.main_nav-container {  
+  display: flex;
+  justify-content: space-evenly; 
+  font-size: 16px;
+  background: rgb(60, 59, 110);
+  padding-top: 12px;
+  padding-bottom: 12px;
+  margin-bottom: 40px;
+ }
+
+.navItem {
+  color: #FFF;
+  text-decoration: none;
+}
+
+.navItem:hover {
+  color: rgba(178,32,54); 
+  transition-duration: 0.4s;
+}
+
+
+/* SIDEBAR */
+
+.Statistics {
+  margin-bottom: 15px;
+  border-radius: 5px;
+  border: solid 1px;
+  border-color:  #C0C0C0;
+  padding: 25px 40px 15px 40px;
+  text-align: left;
+
+  background-color:	#FDFDFD;	
+}
+
+.Level {
+  margin-top: 5px;
+  border-radius: 5px;
+  border: solid 1px;
+  border-color: #C0C0C0;
+
+  background-color:	#FDFDFD;	
+}
+
+.SocialIcons {
+  margin-top: 15px;
+  border-radius: 5px;
+  border: solid 1px;
+  border-color: #C0C0C0;
+
+  background-color:	#FDFDFD;	
+}
+
+/* STATISTICS */
+
+.p_heading-statistics {
+  margin-top: 10px;
+  color: rgba(60, 59, 110);
+  font-size: 18px;
+  text-align: center;
+  display: block;
+  line-height: 0px;
+  margin-bottom: 30px;
+}
+
+.statistics_one {
+  display: block;
+  line-height: 0px;
+  margin-top: 15px;
+  color: rgba(60, 59, 110);
+  font-size: 16px;
+}
+
+.p_statistics {
+
+  display: block;
+  line-height: 0px;
+}
+
+.p_statistics_two {
+  display: block;
+  line-height: 0px;
+  color: rgba(60, 59, 110);
+  font-size: 22px;
+}
+
+.progress_bar-statistics {
+  width: 70%;
+  height: 12px;
+	display: inline-block;
+  -webkit-appearance: none;
+}
+
+.statistics_two {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+
+/*LEVEL*/
+
+.Level {
+  padding: 10px 40px 25px 40px;
+}
+
+.Level_two {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.p_level {
+  font-size: 18px;
+  color: rgba(60, 59, 110);
+}
+
+.p_level_two {
+  font-size: 26px;
+}
+
+
+.btn__container {
+  display: flex;
+  justify-content: center;
+  margin-top: 0px;
+}
+
+.btn {
+  text-transform: uppercase;
+  display: inline-block;
+  padding: 12px 50px;
+  border-radius: 5px;
+  border: solid;
+  border-width: 1px;
+  border-color: rgba(60, 59, 110);
+  font-size: 12px;
+  text-decoration: none;
+  background-color: rgba(60, 59, 110);
+  cursor: pointer;
+  transition-duration: 0.4s;
+  color: #fdfdfd;
+  text-align: center;
+  letter-spacing: 1px;
+}
+
+.btn:hover {
+  background-color: rgba(178,32,54); 
+  border-color: rgba(178,32,54); 
+}
+
+/*SOCIAL ICONS*/
+
+.SocialIcons {
+  margin-top: 20px;
+}
+
+.p_SocialIcons {
+  color: rgba(60, 59, 110);
+  margin-top: 25px;
+  font-size: 18px;
+  display: block;
+  text-align: center;
+}
+
+.Social_icons{
+  font-size: 20px;
+  color:rgb(206, 81, 100); 
+}
+
+.social_container {
+  display: flex;
+  justify-content: space-around;
+  margin-left: 40px;
+  margin-right: 40px;
+}
+
+.social_container-icons {
+  margin-bottom: 25px;
+  border: solid 1px;
+  border-radius: 5px;
+  border-color: #C0C0C0;
+  display: inline-block;
+  padding: 9px 30px 9px 30px;
+  background-color: #FFF;
+  cursor: pointer;
+  transition-duration: 0.4s;
+  text-align: center;
+}
+
+.social_container-icons:hover {
+  background-color: rgb(107, 107, 149);
+}
+
+
+
+/* MAIN */
+
+
+.deck_main {
+  display:flex;
+  line-height: 0%;
+  cursor: pointer;
+  border-radius: 4px;
+  margin: 0px 30px 30px 30px;
+  background-color:	rgba(60, 59, 110, 0.2);
+}
+
+.deck_main:hover {
+  background-color: rgb(107, 107, 149, 0.6);
+  transition-duration: 0.4s;
+}
+
+
+.deck_area_one {
+  width: 16%;
+  font-size: 26px;
+  color: rgba(178,32,54); 
+  text-align: center;
+  padding-top: 20px;
+  text-decoration: none;
+}
+
+.deck_area_two {
+  width: 50%;
+  text-align: left;
+  padding-top: 15px;
+  padding-bottom: 20px;
+  text-decoration: none;
+}
+
+.deck_area_three {
+  width: 34%;
+  padding-top: 20px;
+  margin-right: 30px;
+  text-align: right;
+  color: #FFF;
+  text-decoration: none;
+}
+
+
+.deck_area_three :hover {
+  color: rgba(178,32,54); 
+  transition-duration: 0.4s;
+}
+
+
+.p_deck-one { 
+  font-size: 20px;
+  color: rgba(178,32,54); 
+  font-weight: 400;
+  text-decoration: none;
+
+}
+
+.p_deck-two {
+  font-size: 16px;
+  color: 	rgba(60, 59, 110);
+  text-decoration: none;
+}
+
+.progress_bar {
+  width: 100%;
+  height: 14px;
+	display: inline-block;
+	-webkit-appearance: none;
+  
+}
+
+progress::-webkit-progress-bar {
+  background:#FDFDFD;
+  border-radius: 2px;
+  border: 1px solid;
+  border-color:#C0C0C0;
+}
+
+/* Now the value part */
+progress::-webkit-progress-value {
+  background: rgba(178,32,54);
+  border-radius: 2px;
+}
+
+.deck_icon {
+  font-size: 45px;
+  color: rgb(107, 107, 149);
+}
+
+.deck_icon:hover {
+  color: rgba(178,32,54);
+}
+
+.link_deck {
+  color: rgba(178,32,54);
+}
+
+
+/* ABOUT */
+
+.menu_pages-container {
+    margin-top: 10px;
+    margin-bottom: 40px;
+    margin-left: 40px;
+    margin-right: 40px;
+    background-color: rgb(107, 107, 149, 0.2);
+    padding: 20px 7% 20px 7%;
+    border-radius: 5px;
+    font-size: 16px;
+    color: rgb(107, 107, 149);
+}
+
+
+/* APP */
+
+
+/* APP MAIN*/
+
+.Dashboard-app {
+  margin-top: 30px;
+  margin-left: 30px;
+  margin-right: 30px;
+  display: flex;
+  justify-content: space-evenly; 
+}
+
+.DashboardSide-app {
+  height: 540px;
+  width: 400px;
+  margin-right: 15px;
+  display: flex;
+  flex-direction: column;
+}
+.DashboardMain-app {
+  flex-basis: 67%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-left: 15px;
+}
+
+.main_window-app {
+  border-radius: 5px;
+  border: solid 1px;
+  border-color: #C0C0C0;
+  background: #FDFDFD;
+  height: 450px;
+  margin-bottom: 20px;
+}
+
+.SideApp {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    border-radius: 5px;
+    border: solid 1px;
+    border-color: #C0C0C0;
+    background-color:	#FDFDFD;	
+    height: 100%;
+}
+
+.h1_app {
+  margin-top: 50px;
+  color: rgba(178,32,54); 
+  font-size: 48px;
+  line-height: 70px;
+  margin-left: 160px;
+  margin-right: 160px;
+}
+
+.p_app {
+  font-size: 24px;
+  color: rgb(107, 107, 149);
+  margin-left: 80px;
+  margin-right: 80px;
+
+}
+
+.btn-app {
+  height: 70px;
+  width: 100%;
+  text-transform: uppercase;
+  border-radius: 5px;
+  border: solid;
+  border-width: 1px;
+  border-color: rgba(60, 59, 110);
+  font-size: 20px;
+  text-decoration: none;
+  background-color: rgba(60, 59, 110);
+  cursor: pointer;
+  transition-duration: 0.4s;
+  color: #fdfdfd;
+  text-align: center;
+  letter-spacing: 1px;
+}
+
+.btn-app:hover{
+  background-color: rgba(178,32,54); 
+  border-color: rgba(178,32,54); 
+}
+
+.update_buttons-div {
+  display: flex;
+  justify-content: space-between;
+}
+
+.update-buttons {
+  width: 49%;
+}
+
+.app_icon {
+  font-size: 48px;
+  color: rgb(107, 107, 149);
+  float: right;
+  cursor: pointer;
+}
+
+.app_icon:hover {
+  color: rgba(178,32,54); 
+}
+
+
+/* APP SIDEBAR */
+
+.p_heading-sidebar-top {
+  color: rgba(60, 59, 110);
+  font-size: 24px;
+  text-align: center;
+}
+
+.sidebar_wrap {
+  margin-left: 60px;
+  margin-right: 60px;
+}
+
+.sidebar_one {
+  color: rgba(60, 59, 110);
+  font-size: 16px;
+}
+
+
+.p_sidebar{
+  display: block;
+  line-height: 0px;
+}
+
+.p_sidebar_two {
+  display: block;
+  line-height: 0px;
+  color: rgba(60, 59, 110);
+  font-size: 22px;
+}
+
+.progress_bar-sidebar {
+  width: 70%;
+  height: 12px;
+	display: inline-block;
+  -webkit-appearance: none;
+}
+
+.sidebar_two {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.sidebar_btn-container {
+  text-align: center;
+}
+
+.btn_sidebar {
+  text-transform: uppercase;
+  display: inline-block;
+  padding: 12px 50px;
+  border-radius: 5px;
+  border: solid;
+  border-width: 1px;
+  border-color: rgba(60, 59, 110);
+  font-size: 12px;
+  text-decoration: none;
+  background-color: rgba(60, 59, 110);
+  cursor: pointer;
+  transition-duration: 0.4s;
+  color: #fdfdfd;
+  text-align: center;
+  letter-spacing: 1px;
+}
+
+.btn_sidebar:hover {
+  background-color: rgba(178,32,54); 
+  border-color: rgba(178,32,54); 
+}
+
+/* PROGRESS */
+
+.progress_page-container {
+  display: flex;
+  justify-content: center;
+  background-color: #fdfdfd;
+  
+  
+}
+
+.progress_page-button {
+  font-size: 18px;
+  min-width: 300px;
+  border-color: rgba(60, 59, 110);
+  background: rgba(60, 59, 110, 0.2);
+  border-radius: 5px;
+  margin-bottom: 20px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 25px;
+  text-align: left;
+  color: rgba(178,32,54); 
+  border: solid 1px;
+  border-color:  #C0C0C0;
+}
+
+.p_progress-one {
+  color: rgba(60, 59, 110);
+}
+
+.h1_progress {
+  color: rgba(60, 59, 110);
+  padding-top: 20px;
+  padding-bottom: 10px;
+}
+
+.progress_left-column {
+  margin-right: 20px;
+}
+
+.progress_right-column {
+  margin-left: 20px;
+}
