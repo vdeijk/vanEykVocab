@@ -1,35 +1,42 @@
-import React, { Component } from 'react';
+import React from "react";
 
-class Help extends Component {      
-     
-    render () {
+function Help() {
     return (
-        <div className="menu_pages-container">
-            <div>
-                <p>This app helps you understand words. It was made for English language learners.</p>
+      <div className="menu_pages-container">
+        <div>
+          <p>
+            We made this app for intermediate and upper-intermediate learners of
+            English who want to become advanced speakers.
+          </p>
 
-                <p>This app teaches you how to use the most common words in the English language. Research shows
-                    that the 3.000 most common words in any language made up over 95% of all written communication.
-                    For spoken communication, the percentage is even higher.In this app, we use this principle to achieve
-                    maximum effectiveness.</p>
+          <p>
+            To be able to communicate in any language, we must first understand
+            its basic building blocks: individual words. This is what this app
+            helps you achieve. When teaching vocabulary, most teaching methods
+            (and apps) focus far too much on repetition and far too little on
+            understanding and practice.
+          </p>
 
-                <p>Right now, the app has only two modules available. However, others will be added in the near future. Eventually,
-                    it will have around 23 modules to represent all letter of the alphabet. 
-                </p>
-                <p> Once you are inside a module, the app shows you its words randomly. It is up to you to remember the
-                    correct definition of a word. If you do, you will score 25% on that word's "Word progress meter". If you do not, 
-                    your progress on the word will be reset to zero. To clear a module completely, master all of its inidivual words to 100%. 
-                     </p>
-                    <p>This app has additional features to help you learn words better as well. Because the better you learn to use 
-                        words in practice, the less you have to practice repitition. That is also the main principle upon which this app is based. 
-                    </p>
-
-            </div>
+          <p>Language learning should be practical first and foremost.</p>
+          <p>
+            Instead of just definitions, we've made example sentences with how
+            words are actually used by native speakers. This method will help
+            you build confidence and understanding.
+          </p>
+          <p>
+            We also encourage you to write down as many example sentences of
+            your own as you like. The more you practice using a word, the better
+            you will be able to actually use it.
+          </p>
+          <p>
+            To begin learning words, click on one of our modules. You can
+            practice the modules in any order you like; we'll always store your
+            progress.
+          </p>
+          <p>To view this message again, click on "Help" in the main menu.</p>
         </div>
-    )
-    }
-}
-
+      </div>
+    );
+  }
 
 export default Help;
-  

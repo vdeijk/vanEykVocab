@@ -1,13 +1,9 @@
-import { submitValue } from "../Module/QuestionBox";
-
 let buttonValues = [
   "See answer",
-  "Next page",
   "",
   "Next page",
-  "I have my own definition",
-  "My pronunciation is great",
-  "I have made up a few",
+  "I have a definition",
+  "I have a few examples",
   "Next question",
   "Next question",
   "Back to dashboard",
@@ -17,39 +13,48 @@ const initialState = {
   moduleStats: {
     wordProgress: 0,
     moduleProgress: 0,
-    wordMasteryVFW: 0,
-    wordMasteryA: 0,
+    wordMastery: 0,
+    totalWords: 0,
+    moduleName: "",
   },
-  verbsForWriters: [],
-  moduleA: [],
-  moduleAMastered: [],
-  verbsForWritersMastered: [],
-  totalWords: {},
+  init: [true, true, true, true, true, true],
+  appInputValue: ``,
+  appCounter: 0,
+  answeredCorrectly: false,
   pageDisplayed: 0,
   buttonValue: buttonValues[0],
-  answeredCorrectly: false,
   overallStats: {},
-  moduleMastery: {
-    moduleA: false,
-    verbsForWriters: false,
-  },
+  moduleMastery: [false, false, false, false, false, false],
+  currentModuleMastered: false
 };
 
 const rootReducer = (state = initialState, action) => {
   switch (action.type) {
-    case "HANDLE_SUBMIT":
-      if (submitValue === 2) {
+    case "SET_INIT":
+      let initArray = state.init;
+      initArray.splice(action.activeModuleIndex, 1, "false");
+      return {
+        ...state,
+        init: initArray,
+      };
+    case "MODULE_MASTERED":
+      let moduleMastery = state.moduleMastery;
+      moduleMastery.splice(action.activeModuleIndex, 1, "true");
+      return {
+        ...state,
+        currentModuleMastered: true
+      };
+      case "RESET_MODULE_MASTERED":
         return {
           ...state,
-          pageDisplayed: 3,
-          buttonValue: buttonValues[3],
-          answeredCorrectly: false,
+          currentModuleMastered: false
         };
-      } else if (submitValue <= 6) {
+    case "HANDLE_SUBMIT":
+      if (state.pageDisplayed <= 4) {
         return {
           ...state,
-          pageDisplayed: submitValue + 1,
-          buttonValue: buttonValues[submitValue + 1],
+          pageDisplayed: (state.pageDisplayed += 1),
+          buttonValue: buttonValues[state.pageDisplayed],
         };
       } else {
         return {
@@ -61,35 +66,21 @@ const rootReducer = (state = initialState, action) => {
     case "ANSWERED_CORRECTLY":
       return {
         ...state,
-        pageDisplayed: 8,
-        buttonValue: buttonValues[8],
+        pageDisplayed: 6,
+        buttonValue: buttonValues[6],
         answeredCorrectly: true,
       };
     case "PROGRESS_TRACKER_UPDATED":
       return {
         ...state,
+        answeredCorrectly: false,
         moduleStats: {
           wordProgress: action.wordProgress,
           moduleProgress: action.moduleProgress,
-          wordMasteryVFW: action.wordMasteryVFW,
-          wordMasteryA: action.wordMasteryA,
+          wordMastery: action.wordMastery,
+          totalWords: action.totalWords,
+          moduleName: action.moduleName,
         },
-        answeredCorrectly: false,
-        moduleAMastered: action.moduleAMastered,
-        verbsForWritersMastered: action.verbsForWritersMastered,
-      };
-    case "INIT":
-      return {
-        ...state,
-        pageDisplayed: 0,
-        buttonValue: buttonValues[0],
-        totalWords: action.totalWords,
-      };
-    case "LOAD_WORD_LIST":
-      return {
-        ...state,
-        verbsForWriters: action.verbsForWriters,
-        moduleA: action.moduleA,
       };
     case "WORD_PROGRESS_NEXT_WORD":
       return {
@@ -98,26 +89,24 @@ const rootReducer = (state = initialState, action) => {
           wordProgress: action.wordProgress,
         },
       };
-    case "LOAD_OVERALL_STATISTICS":
-      return {
-        ...state,
-        overallStats: {
-          totalModules: action.overallStats.totalModules,
-          totalModulesCleared: action.overallStats.totalModulesCleared,
-          totalOverallWords: action.overallStats.totalOverallWords,
-          totalOverallWordsCleared:
-            action.overallStats.totalOverallWordsCleared,
-        },
-        totalWords: {
-          totalWordsVFW: action.totalWords.totalWordsVFW,
-          totalWordsA: action.totalWords.totalWordsA,
-        },
-      };
     case "SET_INITIAL_STATE":
       return {
         ...state,
         pageDisplayed: 0,
         answeredCorrectly: false,
+        buttonValue: buttonValues[0],
+        appInputValue: ``,
+        appCounter: 0,
+      };
+    case "HANDLE_INPUT":
+      return {
+        ...state,
+        appInputValue: action.value,
+      };
+    case "COUNTER_UPDATE":
+      return {
+        ...state,
+        appCounter: (state.appCounter += 1),
       };
     case "LIST_MASTERY":
       return {
@@ -126,11 +115,13 @@ const rootReducer = (state = initialState, action) => {
           moduleA: action.moduleA,
           verbsForWriters: action.verbsForWriters,
         },
-        pageDisplayed: 9,
-        buttonValue: buttonValues[9],
+        pageDisplayed: 7,
+        buttonValue: buttonValues[7],
       };
+
+    default:
+      return state;
   }
-  return state;
 };
 
 export default rootReducer;

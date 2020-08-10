@@ -1,15 +1,14 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { IoLogoTwitter } from "react-icons/io";
 import { IoLogoFacebook } from "react-icons/io";
 import { IoLogoLinkedin } from "react-icons/io";
 
-class SocialIcons extends Component {     
-
-  render () {
+function SocialIcons() {     
       return (
-            <div className="SocialIcons">
-                <div>
-            <p className="p_SocialIcons">Coming soon</p>
+            <div className="siderbar_container ">
+                <div className="sidebar_heading-container">
+            <h3 className="h3_app">Coming soon</h3>
+            </div>
             <div className="social_container">
                 <div className="social_container-icons">
                     <IoLogoTwitter className="Social_icons" />
@@ -22,11 +21,7 @@ class SocialIcons extends Component {
                 </div> 
             </div>
           </div>
-          </div>
       );
     }
-  }
-
-
 
 export default SocialIcons;

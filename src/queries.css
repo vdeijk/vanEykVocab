@@ -1,0 +1,25 @@
+@media only screen and (max-wdith: 1200px) {
+  @media only screen and (max-wdith: 1200) {
+    .DashboardSide {
+      min-width: 320px;
+    }
+    .headerText {
+      padding-top: 90px;
+      font-size: 116px;
+    }
+
+    .headerTextTwo {
+      padding-top: 70px;
+      font-size: 30px;
+    }
+  }
+
+  @media only screen and (max-wdith: 1024) {
+  }
+
+  @media only screen and (max-wdith: 768) {
+  }
+
+  @media only screen and (max-wdith: 480px) {
+  }
+}

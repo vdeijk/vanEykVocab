@@ -1,8 +1,6 @@
-import React, { Component } from 'react';
+import React from 'react';
 
-class Account extends Component {      
-     
-    render () {
+function Account() {      
     return (
         <div className="menu_pages-container">
             <div>
@@ -11,8 +9,6 @@ class Account extends Component {
         </div>
     )
     }
-}
-
 
 export default Account;
   

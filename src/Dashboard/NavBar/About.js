@@ -1,8 +1,6 @@
-import React, { Component } from 'react';
+import React from 'react';
 
-class About extends Component {      
-     
-    render () {
+function About() {      
     return (
         <div className="menu_pages-container">
             <div>
@@ -21,8 +19,6 @@ class About extends Component {
         </div>
     )
     }
-}
-
 
 export default About;
   

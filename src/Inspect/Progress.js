@@ -1,47 +1,44 @@
 import React, { Component } from "react";
-import { loadWordList } from "../Server/ServerFunctions";
-import { connect } from "react-redux";
-import { withRouter } from "react-router-dom";
+import { progressCalculations } from "../Server/ServerFunctions";
+import { progressCalculationsObject } from "../Server/ServerFunctions";
+
+export let activeModuleProgress;
 
 class Progress extends Component {
-  componentDidMount() {
-    loadWordList();
+  state = {
+    progressCalculationsObject: {},
+  };
+
+  constructor(props) {
+    super(props);
+    activeModuleProgress = this.props.match.params.id;
+    progressCalculations();
   }
 
+  componentDidMount() {
+    this.setState({ progressCalculationsObject: progressCalculationsObject })}
+
   render() {
-    let activeModule = this.props.match.params.id;
-    let currentModule;
-    let currentModuleMastered;
-
-    switch (activeModule) {
-      case "verbsForWriters":
-        currentModule = this.props.verbsForWriters;
-        currentModuleMastered = this.props.verbsForWritersMastered;
-        break;
-      case "moduleA":
-        currentModule = this.props.moduleA;
-        currentModuleMastered = this.props.moduleAMastered;
-        break;
-      default:
-        break;
-    }
-
     //Words learning
-
     let i = 0;
-    const progressItems = currentModule.map((counter) => {
-      let name = currentModule[i].name;
-      let progressTracker = currentModule[i].progressTracker;
-      return (
-        <div className="progress_page-button " key={i}>
-          <p className="p_progress-one"> Word {(i += 1)} -</p>&nbsp;
-          <p>
-            {name}: &nbsp;
-            {progressTracker}%
-          </p>
-        </div>
-      );
-    });
+    let progressItems;
+
+    progressItems = progressCalculationsObject.currentModule.map(
+      (counter) => {
+        let name = progressCalculationsObject.currentModule[i].name;
+        let progressTracker =
+          progressCalculationsObject.currentModule[i].progressTracker;
+        return (
+          <div className="progress_page-button " key={i}>
+            <p className="p_progress-one"> Word {(i += 1)} -</p>&nbsp;
+            <p>
+              {name}: &nbsp;
+              {progressTracker}%
+            </p>
+          </div>
+        );
+      }
+    );
 
     var firstHalf = progressItems.slice(0, progressItems.length / 2);
     var secondHalf = progressItems.slice(
@@ -52,19 +49,21 @@ class Progress extends Component {
     //Words mastered
 
     let j = 0;
-    const masteredItems = currentModuleMastered.map((counter) => {
-      let name = currentModuleMastered[j].name;
-      let progressTracker = "100";
-      return (
-        <div className="progress_page-button " key={j}>
-          <p className="p_progress-one"> Word {(j += 1)} -</p>&nbsp;
-          <p>
-            {name}: &nbsp;
-            {progressTracker}%
-          </p>
-        </div>
-      );
-    });
+    const masteredItems = progressCalculationsObject.currentModuleMastered.map(
+      (counter) => {
+        let name = progressCalculationsObject.currentModuleMastered[j].name;
+        let progressTracker = "100";
+        return (
+          <div className="progress_page-button " key={j}>
+            <p className="p_progress-one"> Word {(j += 1)} -</p>&nbsp;
+            <p>
+              {name}: &nbsp;
+              {progressTracker}%
+            </p>
+          </div>
+        );
+      }
+    );
 
     var firstHalfMastered = masteredItems.slice(0, masteredItems.length / 2);
     var secondHalfMastered = masteredItems.slice(
@@ -74,12 +73,20 @@ class Progress extends Component {
 
     return (
       <div>
-        <h1 className="h1_progress">Words currently learning</h1>
+        <h1 className="h1_progress">
+          Words currently learning (
+          {progressCalculationsObject.totalWords -
+            progressCalculationsObject.wordMastery}
+          /{progressCalculationsObject.totalWords})
+        </h1>
         <div className="progress_page-container ">
           <div className="progress_left-column">{firstHalf}</div>
           <div className="progress_right-column">{secondHalf}</div>
         </div>
-        <h1 className="h1_progress">Words Mastered</h1>
+        <h1 className="h1_progress">
+          Words Mastered ({progressCalculationsObject.wordMastery}/
+          {progressCalculationsObject.totalWords})
+        </h1>
         <div className="progress_page-container ">
           <div className="progress_left-column">{firstHalfMastered}</div>
           <div className="progress_right-column">{secondHalfMastered}</div>
@@ -89,13 +96,4 @@ class Progress extends Component {
   }
 }
 
-const mapStateToProps = (state) => {
-  return {
-    verbsForWriters: state.verbsForWriters,
-    moduleA: state.moduleA,
-    verbsForWritersMastered: state.verbsForWritersMastered,
-    moduleAMastered: state.moduleAMastered,
-  };
-};
-
-export default withRouter(connect(mapStateToProps, null)(Progress));
+export default Progress;

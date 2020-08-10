@@ -1,32 +1,76 @@
-import React, { Component } from 'react';
-import { connect } from 'react-redux';
+import React, { Component } from "react";
+import { connect } from "react-redux";
+import {Link } from 'react-router-dom';
+import { appMasteredCalculations } from "../Server/ServerFunctions";
 
+class UpdateButtons extends Component {
+  render() {
+    let displayThis;
+    if (this.props.currentModuleMastered) {
+      displayThis = (
+        <Link to="/" className="btn-app update-buttons" onClick={appMasteredCalculations}>
+          <input
+            type="button"
+            className="btn-app update-buttons"
+            name="submit"
+            id="submitButton"
+            value="About to master"
+          />
+        </Link>
+      )} else {
+        displayThis = (<input
+        type="button"
+        className="btn-app update-buttons"
+        name="submit"
+        id="submitButton"
+        value="Fully"
+        onClick={this.props.answeredCorrectly}
+      />
+        )};
 
-class UpdateButtons extends Component {  
-    
-    render () {
     return (
-        <div className="update_buttons-div">
-            <input type ="button" className="btn-app update-buttons" name="submit" 
-            id="submitButton" value ="Yes, I do" 
-            onClick={this.props.answeredCorrectly} />
-            <input type ="button" className="btn-app update-buttons" name="submit" 
-            id="submitButton" value ="No, I don't" 
-            onClick={this.props.handleSubmit} />
-        </div>
-        );
-    }
+      <div className="update_buttons-div">
+        <React.Fragment>{displayThis}</React.Fragment>
+        <input
+          type="button"
+          className="btn-app update-buttons"
+          name="submit"
+          id="submitButton"
+          value="Somewhat"
+          onClick={this.props.handleSubmit}
+        />
+        <input
+          type="button"
+          className="btn-app update-buttons"
+          name="submit"
+          id="submitButton"
+          value="Not really"
+          onClick={this.props.handleSubmit}
+        />
+      </div>
+    );
+  }
 }
 
-const mapDispatchToProps = dispatch => {
-    return {
-        handleSubmit: () => dispatch ({
-        type: 'HANDLE_SUBMIT'}),
 
-        answeredCorrectly: () => dispatch ({
-        type: 'ANSWERED_CORRECTLY'}),
-    }
+const mapStateToProps = (state) => {
+  return {
+    currentModuleMastered: state.currentModuleMastered,
   };
-  
-export default connect(null, mapDispatchToProps)(UpdateButtons);
-  
+};
+
+const mapDispatchToProps = (dispatch) => {
+  return {
+    handleSubmit: () =>
+      dispatch({
+        type: "HANDLE_SUBMIT",
+      }),
+
+    answeredCorrectly: () =>
+      dispatch({
+        type: "ANSWERED_CORRECTLY",
+      }),
+  };
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(UpdateButtons);
