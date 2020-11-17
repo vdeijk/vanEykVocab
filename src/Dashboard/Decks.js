@@ -16,8 +16,7 @@ class Decks extends Component {
       let totalWords = allModulesProgress[i].totalWords;
       i++;
 
-      console.log(moduleProgress);
-      if (moduleProgress < 100) {
+            if (moduleProgress < 100) {
       return (
         <div className="deck_main" key={"deck" + i}>
           <Link to={"/MainBox" + id} className="deck_area_one">
