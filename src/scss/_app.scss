@@ -1,0 +1,193 @@
+/* APP MAIN*/
+
+.app-dashboard {
+  display: flex;
+
+  &__main {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-left: 5px;
+  }
+
+  &__p {
+    font-size: 18px;
+    color: var(--color-secondary);
+    margin-left: 40px;
+    margin-right: 40px;
+    text-align: left;
+  }
+
+  &__a {
+    margin-top: 20px;
+    font-size: 18px;
+    color: var(--color-primary);
+    margin-left: 40px;
+    margin-right: 40px;
+    text-align: left;
+  }
+
+  &__input {
+    all: none;
+    margin-left: 40px;
+    margin-right: 40px;
+    width: 60%;
+    border-color: #c0c0c0;
+    border-width: 1px;
+    font-size: 18px;
+    display: inline-block;
+    color: var(--color-secondary);
+
+    &:focus {
+      border-color: #c0c0c0;
+      border-width: 1px;
+      font-size: 18px;
+    }
+  }
+}
+
+.app-sidebar {
+  min-width: 340px;
+  margin-right: 5px;
+  display: flex;
+  flex-direction: column;
+}
+
+.main-window {
+  position: relative;
+  border-radius: 5px;
+  border: solid 1px;
+  border-color: #c0c0c0;
+  background: #fdfdfd;
+  margin-bottom: 10px;
+  min-height: 500px;
+
+  &__heading {
+    margin-top: 80px;
+    margin-left: 40px;
+    margin-right: 40px;
+    text-align: left;
+    color: white;
+  }
+
+  &__icon {
+    font-size: 48px;
+    color: var(--color-secondary);
+    float: right;
+    cursor: pointer;
+
+    &:hover {
+      color: var(--color-primary);
+    }
+  }
+
+  &__popup {
+    position: fixed;
+    background-color: rgba(178, 32, 54, 0.8);
+    z-index: 10;
+    margin: 80px 160px 80px 160px;
+    padding: 20px 40px 20px 40px;
+    color: white;
+    font-size: 18px;
+    border-radius: 5px;
+  }
+}
+
+/* APP SIDEBAR */
+
+.sidebar-app {
+  min-height: 500px;
+  border-radius: 5px;
+  border: solid 1px;
+  border-color: #c0c0c0;
+  background-color: #fdfdfd;
+  margin-bottom: 10px;
+
+  &__heading {
+    margin-top: 80px;
+    margin-left: 40px;
+    margin-right: 40px;
+    text-align: left;
+  }
+}
+
+.sidebar_wrap {
+  margin-top: 100px;
+  margin-left: 40px;
+  margin-right: 40px;
+}
+
+.sidebar_one {
+  color: var(--color-secondary);
+  font-size: 16px;
+}
+
+.p_sidebar {
+  display: block;
+  line-height: 0px;
+  font-size: 18px;
+}
+
+.p_sidebar_two {
+  display: block;
+  line-height: 0px;
+  color: var(--color-secondary);
+  font-size: 18px;
+}
+
+.progress_bar-sidebar {
+  width: 70%;
+  height: 12px;
+  display: inline-block;
+  border-radius: 5px;
+  -webkit-appearance: none;
+}
+
+.sidebar_two {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* BUTTONS */
+
+.btn-app {
+  font-family: Aleo;
+  height: 60px;
+  width: 100%;
+  border-radius: 5px;
+  border: solid;
+  border-width: 1px;
+  border-color: var(--color-secondary);
+  font-size: 16px;
+  text-decoration: none;
+  background-color: var(--color-secondary);
+  cursor: pointer;
+  transition-duration: 0.4s;
+  color: #fdfdfd;
+  text-align: center;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+
+  &:hover,
+  &:focus {
+    background-color: var(--color-primary);
+    border-color: var(--color-primary);
+    outline: none;
+  }
+
+  &__option-button {
+    width: 32%;
+  }
+
+  &__counter-update {
+    margin-left: 40px;
+    width: 32%;
+  }
+}
+
+.option-buttons {
+  display: flex;
+  justify-content: space-between;
+}

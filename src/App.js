@@ -1,22 +1,16 @@
-import React, { Component } from 'react';
-import './App.css';
-import DashboardMain from './Dashboard/DashboardMain.js';
-import MainBox from './Module/MainBox.js';
-import {BrowserRouter} from 'react-router-dom';
-import {Route, Switch } from 'react-router-dom';
+import React from "react";
+import "./scss/main.scss";
+import AppDashboard from "./components/pages/AppDashboard.js";
+import AppModules from "./components/pages/AppModules.js";
+import { Route, Switch } from "react-router-dom";
 
-class App extends Component {     
-
-  render () {
-      return (
-          <BrowserRouter>
-            <Switch>
-              <Route path="/MainBox:id" component={MainBox} />
-              <Route path="/" component={DashboardMain} />
-            </Switch>
-          </BrowserRouter>
-      );
-    }
-}
+const App = () => {
+  return (
+    <Switch>
+      <Route path="/mainBox/:id" component={AppModules} />
+      <Route path="/" component={AppDashboard} />
+    </Switch>
+  );
+};
 
 export default App;

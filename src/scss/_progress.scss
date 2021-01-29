@@ -1,0 +1,33 @@
+.progress-page {
+  display: flex;
+  justify-content: space-evenly;
+  background-color: #fdfdfd;
+  color: var(--color-secondary);
+
+  &__left-column {
+    flex: 1;
+    margin-left: 20px;
+    margin-right: 5px;
+  }
+
+  &__right-column {
+    flex: 1;
+    margin-left: 5px;
+    margin-right: 20px;
+  }
+
+  &__button {
+    font-size: 18px;
+    border-color: var(--color-secondary);
+    background: rgba(60, 59, 110, 0.2);
+    border-radius: 5px;
+    margin-bottom: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 25px;
+    text-align: left;
+    color: var(--color-primary);
+    border: solid 1px;
+    border-color: #c0c0c0;
+  }
+}
