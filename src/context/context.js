@@ -3,14 +3,13 @@ import reducer from "./reducer";
 
 export const initialState = {
   modules: {
-    initialRound: true,
-    mastered: false,
     answeredCorrectly: false,
     pageDisplayed: 0,
     showPopup: false,
-    inputValue: ``,
+    inputValue: "",
     inputCounter: 0,
     redirect: false,
+    moduleMastery: false,
   },
   buttonValues: [
     "Continue",
@@ -22,26 +21,21 @@ export const initialState = {
     "Continue",
     "Continue",
   ],
-  wordData: {},
-  moduleData: {},
+  allData: {
+    wordData: {
+      wordProgress: 0,
+    },
+    moduleData: {
+      name: "",
+      progress: 0,
+    },
+  },
 };
 
 const AppContext = React.createContext();
 
 const AppProvider = ({ children }) => {
   const [state, dispatch] = useReducer(reducer, initialState);
-
-  const setInitialRound = () => {
-    dispatch({ type: "SET_INITIAL_ROUND" });
-  };
-
-  const setDataState = (wordData, moduleData) => {
-    dispatch({
-      type: "SET_DATA_STATE",
-      payloadWords: wordData,
-      payloadModule: moduleData,
-    });
-  };
 
   const handleProgress = (e) => {
     dispatch({ type: "HANDLE_PROGRESS", payload: e.target.name });
@@ -68,23 +62,26 @@ const AppProvider = ({ children }) => {
     dispatch({ type: "COUNTER_UPDATE" });
   };
 
-  const setRedirect = () => {
-    dispatch({ type: "SET_REDIRECT" });
+  const setMastery = (masteryTemp) => {
+    dispatch({ type: "SET_MASTERY", payload: masteryTemp });
+  };
+
+  const setAllData = (allDataTemp) => {
+    dispatch({ type: "SET_ALLDATA", payload: allDataTemp });
   };
 
   return (
     <AppContext.Provider
       value={{
         ...state,
-        setInitialRound,
         togglePopup,
         handleInput,
         handleSubmit,
         clearInput,
         handleProgress,
         counterUpdate,
-        setDataState,
-        setRedirect,
+        setMastery,
+        setAllData,
       }}
     >
       {children}

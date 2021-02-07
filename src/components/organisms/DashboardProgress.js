@@ -1,16 +1,35 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
-import { dataModules } from "../../data/dataModules";
+import { calculateModuleStats } from "../../calculations/calculations";
+import DashboardProgressColumn from "../molecules/DashboardProgressColumn";
 
 const DashboardProgress = () => {
+  const [moduleStats, setModuleStats] = useState({
+    totalWords: 0,
+    wordMastery: 0,
+  });
+
+  const [activeModule, setActiveModule] = useState({
+    unmasteredWords: [],
+    masteredWords: [],
+  });
+
+  useEffect(() => {
+    fetchData();
+  }, []);
+
   const { id } = useParams();
-  const activeModule = dataModules[id];
-  const { totalWords, wordMastery } = activeModule;
+
+  const fetchData = async () => {
+    const moduleStatsTemp = await calculateModuleStats(id);
+    setModuleStats(moduleStatsTemp);
+    setActiveModule(moduleStatsTemp.activeModule);
+  };
 
   const listWords = (element) => {
     return element.map((el, index) => {
       return (
-        <div className="progress-page__button" key={index}>
+        <div className="progress-page__item" key={index}>
           <p> Word {(index += 1)} -</p>&nbsp;
           <p>
             {el.name}: &nbsp;
@@ -25,9 +44,9 @@ const DashboardProgress = () => {
   const masteredWords = listWords(activeModule.masteredWords);
 
   const splitWords = (el) => {
-    let result = [];
-    result[0] = el.slice(0, el.length / 2);
-    result[1] = el.slice(el.length / 2, el.length);
+    let result = {};
+    result.leftColumn = el.slice(0, el.length / 2);
+    result.rightColumn = el.slice(el.length / 2, el.length);
     return result;
   };
 
@@ -36,28 +55,16 @@ const DashboardProgress = () => {
 
   return (
     <div>
-      <h1>
-        Words currently learning ({totalWords - wordMastery}/{totalWords})
-      </h1>
-      <div className="progress-page">
-        <div className="progress-page__left-column">
-          {unmasteredWordsSplit[0]}
-        </div>
-        <div className="progress-page__right-column">
-          {unmasteredWordsSplit[1]}
-        </div>
-      </div>
-      <h1>
-        Words Mastered ({wordMastery}/{totalWords})
-      </h1>
-      <div className="progress-page">
-        <div className="progress-page__left-column">
-          {masteredWordsSplit[0]}
-        </div>
-        <div className="progress-page__right-column">
-          {masteredWordsSplit[1]}
-        </div>
-      </div>
+      <h2>
+        Words currently learning (
+        {moduleStats.totalWords - moduleStats.wordMastery}/
+        {moduleStats.totalWords})
+      </h2>
+      <DashboardProgressColumn words={unmasteredWordsSplit} />
+      <h2>
+        Words Mastered ({moduleStats.wordMastery}/{moduleStats.totalWords})
+      </h2>
+      <DashboardProgressColumn words={masteredWordsSplit} />
     </div>
   );
 };

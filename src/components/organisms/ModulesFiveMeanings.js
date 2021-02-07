@@ -1,21 +1,20 @@
 import React from "react";
-import ModulesMainTopButtons from "../molecules/ModulesMainTopButtons";
+import ModulesTopButtons from "../molecules/ModulesTopButtons";
 import { useGlobalContext } from "../../context/context";
 
-const ModulesPageFive = () => {
-  const { modules, wordData, togglePopup } = useGlobalContext();
+const ModulesFiveMeanings = (props) => {
+  const { modules, togglePopup } = useGlobalContext();
   const { showPopup } = modules;
+  const wordData = props.wordData;
 
   return (
-    <div className="main-window">
-      <ModulesMainTopButtons
+    <>
+      <ModulesTopButtons
         modulesShowPopup={showPopup}
         togglePopup={togglePopup}
       />
-      <div className="main-window__heading">
-        <h3>{wordData.name}</h3>
-      </div>
-      <p className="app-dashboard__p">
+      <h3>{wordData.name}</h3>
+      <p>
         This word has other important meanings too:&nbsp;
         <a
           href="https://www.oxfordlearnersdictionaries.com/"
@@ -25,8 +24,8 @@ const ModulesPageFive = () => {
           Oxford Learn's Dictionaries
         </a>
       </p>
-    </div>
+    </>
   );
 };
 
-export default ModulesPageFive;
+export default ModulesFiveMeanings;

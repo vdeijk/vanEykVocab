@@ -1,51 +1,29 @@
 import React from "react";
-import { dataOverall } from "../../data/dataModules";
 
-const DashboardStatistics = () => {
+const DashboardStatistics = (props) => {
   const {
+    wordMastery,
+    totalWords,
+    modulesCleared,
     totalModules,
-    totalModulesCleared,
-    totalOverallWords,
-    totalWordMastery,
-  } = dataOverall;
+  } = props.overallStats;
 
   return (
-    <>
-      <div className="sidebar__heading">
-        <h3>Your statistics</h3>
+    <div className="statistics">
+      <h3>Your statistics</h3>
+      <div>
+        <p>
+          Words mastered: {wordMastery}/{totalWords}
+        </p>
+        <progress max={totalWords} value={wordMastery} />
       </div>
-      <div className="statistics">
-        <div className="statistics__container-one">
-          <p className="statistics-p">Words mastered:</p>
-          <div className="statistics__container-two">
-            <p className="statistics-p">
-              {totalWordMastery}/{totalOverallWords}
-            </p>
-            &nbsp;&nbsp;
-            <progress
-              max={totalOverallWords}
-              value={totalWordMastery}
-              className="statistics__progress_bar"
-            ></progress>
-          </div>
-        </div>
-
-        <div className="statistics__container-one">
-          <p className="statistics-p">Modules mastered:</p>
-          <div className="statistics__container-two">
-            <p className="statistics-p">
-              {totalModulesCleared}/{totalModules}
-            </p>
-            &nbsp;&nbsp;
-            <progress
-              max={totalModules}
-              value={totalModulesCleared}
-              className="statistics__progress_bar"
-            ></progress>
-          </div>
-        </div>
+      <div>
+        <p>
+          Modules mastered: {modulesCleared}/{totalModules}
+        </p>
+        <progress max={totalModules} value={modulesCleared} />
       </div>
-    </>
+    </div>
   );
 };
 

@@ -2,31 +2,28 @@ import React from "react";
 
 const OptionButtons = (props) => {
   return (
-    <div className="option-buttons">
-      <input
-        type="button"
-        className="btn-app btn-app__option-button"
+    <div className="modules__buttons">
+      <button
+        className="buttons__page-one"
         name="buttonNotReally"
-        id="submitButton"
-        value="Not really"
         onClick={props.handleProgress}
-      />
-      <input
-        type="button"
-        className="btn-app btn-app__option-button"
+      >
+        Not really
+      </button>
+      <button
+        className="buttons__page-one"
         name="buttonSomewhat"
-        id="submitButton"
-        value="Somewhat"
         onClick={props.handleProgress}
-      />
-      <input
-        type="button"
-        className="btn-app btn-app__option-button"
+      >
+        Somewhat
+      </button>
+      <button
+        className="buttons__page-one"
         name="buttonFully"
-        id="submitButton"
-        value="Fully"
         onClick={props.handleProgress}
-      />
+      >
+        Fully
+      </button>
     </div>
   );
 };

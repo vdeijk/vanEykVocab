@@ -2,14 +2,13 @@ import React from "react";
 
 const SubmitButton = (props) => {
   return (
-    <input
-      type="button"
-      className="btn-app"
+    <button
       name="submit"
-      id="submitButton"
-      value={props.buttonValue}
+      className="modules__button"
       onClick={props.handleSubmit}
-    />
+    >
+      {props.buttonValue}
+    </button>
   );
 };
 

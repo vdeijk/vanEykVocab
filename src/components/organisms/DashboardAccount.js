@@ -1,11 +1,7 @@
 import React from "react";
 
 function DashboardAccount() {
-  return (
-    <div className="dashboard__other-pages">
-      <p> Coming soon</p>
-    </div>
-  );
+  return <p> Coming soon</p>;
 }
 
 export default DashboardAccount;

@@ -1,40 +1,55 @@
-import React, { useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import DashboardDecks from "../organisms/DashboardDecks";
 import DashboardAbout from "../organisms/DashboardAbout";
 import DashboardHelp from "../organisms/DashboardHelp";
 import DashboardAccount from "../organisms/DashboardAccount";
 import DashboardProgress from "../organisms/DashboardProgress";
-import DashboardNavBar from "../molecules/DashboardNavBar";
+import DashboardNavbar from "../molecules/DashboardNavbar";
+import DashboardTopbar from "../molecules/DashboardTopbar";
 import DashboardStatistics from "../molecules/DashboardStatistics";
 import DashboardSocialIcons from "../molecules/DashboardSocialIcons";
 import { Route } from "react-router-dom";
-import { useGlobalContext } from "../../context/context";
+import { calculateDashboardStats } from "../../calculations/calculations";
 
 const AppDashboard = () => {
-  const { setInitialRound } = useGlobalContext();
+  const [dashboardStats, setDashboardStats] = useState({
+    totalModules: 0,
+    totalWords: 0,
+    modulesCleared: 0,
+    wordMastery: 0,
+    dataModules: [],
+  });
 
-  useEffect(setInitialRound, []);
+  useEffect(() => {
+    fetchData();
+  }, []);
+
+  const fetchData = async () => {
+    const overallStatsTemp = await calculateDashboardStats();
+    setDashboardStats(overallStatsTemp);
+  };
 
   return (
     <div className="dashboard">
-      <div className="sidebar">
-        <DashboardStatistics />
+      <div className="dashboard__side">
+        <DashboardStatistics overallStats={dashboardStats} />
         <DashboardSocialIcons />
       </div>
 
-      <div className="dashboard-main">
-        <div className="header">
-          <div className="header-text__main">Clear It up!</div>
-          <div className="header-text__sub">
-            Become an advanced English speaker
-          </div>
+      <div className="dashboard__main">
+        <div className="main-nav">
+          <DashboardTopbar />
+          <DashboardNavbar />
         </div>
-        <DashboardNavBar />
-        <Route path="/" exact component={DashboardDecks} />
-        <Route path="/help" component={DashboardHelp} />
-        <Route path="/about" component={DashboardAbout} />
-        <Route path="/account" component={DashboardAccount} />
-        <Route path="/progress/:id" component={DashboardProgress} />
+        <div className="dashboard__page">
+          <Route path="/" exact>
+            <DashboardDecks dataModules={dashboardStats.dataModules} />
+          </Route>
+          <Route path="/help" component={DashboardHelp} />
+          <Route path="/about" component={DashboardAbout} />
+          <Route path="/account" component={DashboardAccount} />
+          <Route path="/progress/:id" component={DashboardProgress} />
+        </div>
       </div>
     </div>
   );

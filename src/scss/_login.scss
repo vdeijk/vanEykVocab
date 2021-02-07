@@ -1,0 +1,44 @@
+.login {
+  display: grid;
+  justify-items: center;
+
+  &__container {
+    margin-top: 5rem;
+    display: flex;
+    flex-direction: column;
+    background: var(--color-white);
+    width: 60rem;
+    padding: 3rem;
+  }
+
+  &__header {
+    min-height: 32rem;
+    background-image: linear-gradient(
+        var(--color-primary-header),
+        var(--color-primary-header)
+      ),
+      url(../assets/newyorkflag.jpg);
+    background-position: center;
+    background-size: cover;
+    border-radius: var(--border-radius-large);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__h1 {
+    color: var(--color-white);
+    line-height: 100%;
+  }
+
+  &__h3 {
+    color: var(--color-white);
+    line-height: 100%;
+  }
+
+  &__button {
+    margin-top: 1.5rem;
+    width: 50%;
+  }
+}

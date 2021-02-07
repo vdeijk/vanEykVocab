@@ -1,33 +1,28 @@
 .progress-page {
   display: flex;
   justify-content: space-evenly;
-  background-color: #fdfdfd;
+  background-color: var(--color-white);
   color: var(--color-secondary);
 
   &__left-column {
     flex: 1;
-    margin-left: 20px;
-    margin-right: 5px;
+    margin-left: 2rem;
+    margin-right: 0.5rem;
   }
 
   &__right-column {
     flex: 1;
-    margin-left: 5px;
-    margin-right: 20px;
+    margin-left: 0.5rem;
+    margin-right: 2rem;
   }
 
-  &__button {
-    font-size: 18px;
-    border-color: var(--color-secondary);
-    background: rgba(60, 59, 110, 0.2);
-    border-radius: 5px;
-    margin-bottom: 10px;
-    padding-top: 5px;
-    padding-bottom: 5px;
-    padding-left: 25px;
-    text-align: left;
+  &__item {
+    font-size: var(--default-font-size);
+    border: var(--standard-border);
+    background: var(--color-background);
+    border-radius: var(--border-radius-large);
+    margin-bottom: 1rem;
+    padding: 0.5rem 2.5rem;
     color: var(--color-primary);
-    border: solid 1px;
-    border-color: #c0c0c0;
   }
 }

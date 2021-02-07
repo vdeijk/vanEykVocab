@@ -1,43 +1,21 @@
 import React from "react";
 
 const ModulesSidebar = (props) => {
+  const { moduleData, wordData } = props.allData;
+
   return (
-    <div className="sidebar-app">
-      <div className="sidebar-app__heading">
-        <h3>{props.moduleData.name}</h3>
+    <div className="sidebar">
+      <h3>{moduleData.name}</h3>
+      <div>
+        <p>Progress on this word: {wordData.wordProgress} %</p>
+        &nbsp;&nbsp;
+        <progress max="100" value={wordData.wordProgress} />
       </div>
-
-      <div className="sidebar_wrap">
-        <div className="sidebar_one">
-          <p className="p_sidebar">Progress on this word:</p>
-          <div className="sidebar_two">
-            <p className="p_sidebar_two">{props.wordProgress} %</p>
-            &nbsp;&nbsp;
-            <progress
-              max="100"
-              value={props.wordProgress}
-              className="progress_bar-sidebar "
-            ></progress>
-          </div>
-        </div>
-
-        <div className="sidebar_one">
-          <p className="p_sidebar">Progress on this module:</p>
-          <div className="sidebar_two">
-            <p className="p_sidebar_two">
-              {Math.round(props.moduleData.progress)} %
-            </p>
-            &nbsp;&nbsp;
-            <progress
-              max="100"
-              value={Math.round(props.moduleData.progress)}
-              className="progress_bar-sidebar"
-            ></progress>
-          </div>
-        </div>
+      <div>
+        <p>Progress on this module: {Math.round(moduleData.progress)} %</p>
+        &nbsp;&nbsp;
+        <progress max="100" value={Math.round(moduleData.progress)} />
       </div>
-
-      <div className="sidebar_btn-container"></div>
     </div>
   );
 };
