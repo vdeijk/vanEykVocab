@@ -10,8 +10,11 @@ import DashboardStatistics from "../molecules/DashboardStatistics";
 import DashboardSocialIcons from "../molecules/DashboardSocialIcons";
 import { Route } from "react-router-dom";
 import { calculateDashboardStats } from "../../calculations/calculations";
+import { useGlobalContext } from "../../context/context";
 
 const AppDashboard = () => {
+  const { setInitialState } = useGlobalContext();
+
   const [dashboardStats, setDashboardStats] = useState({
     totalModules: 0,
     totalWords: 0,
@@ -21,6 +24,7 @@ const AppDashboard = () => {
   });
 
   useEffect(() => {
+    setInitialState();
     fetchData();
   }, []);
 

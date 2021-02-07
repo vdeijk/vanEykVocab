@@ -3,7 +3,7 @@ import { dataOverall } from "../data/dataModules";
 
 let activeModule;
 let randomNumber;
-const WORDPROGRESSCONST = 50;
+const WORDPROGRESSCONST = 25;
 
 export let setData = (id) => {
   activeModule = dataModules[id];

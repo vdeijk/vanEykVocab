@@ -7,7 +7,7 @@ const rootReducer = (state, action) => {
     inputCounter,
     moduleMastery;
 
-  const WORDPROGRESSCONST = 50;
+  const WORDPROGRESSCONST = 25;
 
   switch (action.type) {
     case "HANDLE_SUBMIT":
@@ -80,6 +80,11 @@ const rootReducer = (state, action) => {
       return {
         ...state,
         allData: allData,
+      };
+    case "SET_INITIAL_STATE":
+      return {
+        ...state,
+        modules: { ...state.modules, pageDisplayed: 0 },
       };
 
     default:

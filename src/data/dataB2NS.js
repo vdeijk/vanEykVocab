@@ -3,10 +3,10 @@ let narrow = {
   definitionShort: `measuring a short distance from one side to the other, 
     especially in relation to length`,
   definitionExpanded: ``,
-  exampleOne: `We've got an emergency here that needs to be handled.`,
-  exampleTwo: `You should handle these glass with care or they will break.`,
-  exampleThree: `They dealt with the situation quite efficiently, I would say.`,
-  exampleFour: `The engine was a beast to handle.`,
+  exampleOne: `The passage was far too narrow.`,
+  exampleTwo: `It will be hard for him to get through this narrow corridor.`,
+  exampleThree: `A narrow opening was all that the striker needed.`,
+  exampleFour: `His narrow mind failed to even consider the possibility`,
   progressTracker: 0,
 };
 
@@ -14,10 +14,10 @@ let national = {
   name: `National`,
   definitionShort: `connected with a particular nation; shared by a whole nation`,
   definitionExpanded: ``,
-  exampleOne: `No harm will come to the prisoners.`,
-  exampleTwo: `The injury should cause no permanent harm.`,
-  exampleThree: `I wish I could shield her from further harm.`,
-  exampleFour: `No harm was done, though it made him feel a little uneasy.`,
+  exampleOne: `It is a national holiday`,
+  exampleTwo: `Some would say she has hecome a national treasure.`,
+  exampleThree: `It is no longer only a local matter, but a national one`,
+  exampleFour: `He gave most of his money to a national charity`,
   progressTracker: 0,
 };
 
@@ -26,10 +26,10 @@ let neat = {
   definitionShort: `tidy and in order; carefully done or arranged, 
     especially to a person’s health or to the environment`,
   definitionExpanded: ``,
-  exampleOne: `Prescriptions drugs can be bad because they cause hidden, harmful effects.`,
-  exampleTwo: `Radiation pollution is particularly harmful to the environment.`,
-  exampleThree: `The chemical could prove harmful to humans as well.`,
-  exampleFour: `These chemical are potentially harmsul so don't ingest them daily.`,
+  exampleOne: `What a neat little car you have!`,
+  exampleTwo: `He had rarely seen handwriting so neat.`,
+  exampleThree: `His appearance isn't as neat as it used to be.`,
+  exampleFour: `The pile of books wasn't very neat at all.`,
   progressTracker: 0,
 };
 
@@ -37,10 +37,10 @@ let negative = {
   name: `Negative`,
   definitionShort: `bad or harmful`,
   definitionExpanded: ``,
-  exampleOne: `Hearing is one of the five main senses.`,
-  exampleTwo: `You shouldn't begin to lose your hearing at such an early age.`,
-  exampleThree: `She regained her hearing after just two months.`,
-  exampleFour: `Their hearing was forever impaired due to the loud music.`,
+  exampleOne: `His negative comments caused quite a stir.`,
+  exampleTwo: `His test results came back negative`,
+  exampleThree: `She was always negative about our chances.`,
+  exampleFour: `Though there is no need to be negative, I do appreciate your honesty.`,
   progressTracker: 0,
 };
 
@@ -49,11 +49,10 @@ let nerve = {
   definitionShort: `any of the long fibres that carry messages between the brain and parts of 
     the body, enabling you to move, feel pain, etc.`,
   definitionExpanded: ``,
-  exampleOne: `The very notion of a kingdom of heaven was ludricous, he thought.`,
-  exampleTwo: `the sorbet was so good that she was in sheer heaven.`,
-  exampleThree: `It was a match made in heaven until he cheated on her.`,
-  exampleFour: `She knew that, for most men, window shopping wasn't exactly heaven on 
-    Earth but didn't care.`,
+  exampleOne: `She was more than a little afraid of nerve damage.`,
+  exampleTwo: `You have to take care of your nerves.`,
+  exampleThree: `The brain has many more nerve endings than it needs.`,
+  exampleFour: `Some nerves a fly messages many times per second.`,
   progressTracker: 0,
 };
 
@@ -61,10 +60,10 @@ let nevertheless = {
   name: `nevertheless`,
   definitionShort: `​despite something that you have just mentioned`,
   definitionExpanded: ``,
-  exampleOne: `She pivoted on her heels to face his stern gaze.`,
-  exampleTwo: `Squating on her heels made her uncomfortable, but she did so anyway.`,
-  exampleThree: `The dogs were always at her heels`,
-  exampleFour: `She never wore high heels unless at official meetings`,
+  exampleOne: `She nevertheless wished him a good day.`,
+  exampleTwo: `Nevertheless, I will continue working hard.`,
+  exampleThree: `You will et paid athe end of the month nevertheless.`,
+  exampleFour: `It was nevertheless a useful experience for them all.`,
   progressTracker: 0,
 };
 
@@ -72,10 +71,10 @@ let nightmare = {
   name: `Nightmare`,
   definitionShort: `a dream that is very frightening or unpleasant`,
   definitionExpanded: ``,
-  exampleOne: `He was relieved to find that hell didn't exist.`,
-  exampleTwo: `He would have hated to spend all eternity amongst demons and pitchforks.`,
-  exampleThree: `Eternal hell will be his punishment until he brings me my sandals.`,
-  exampleFour: `The flames of hell licked at his feet, making him cry in utter despair.`,
+  exampleOne: `She woke up from her nightbare at around 2 o'clock.`,
+  exampleTwo: `I used to have nightmares a few times per week.`,
+  exampleThree: `I haven't had any nightmares since I was a child.`,
+  exampleFour: `The demons of your past can sometimes visit you in a nightmare`,
   progressTracker: 0,
 };
 
@@ -83,10 +82,10 @@ let notion = {
   name: `Notion`,
   definitionShort: `​an idea, a belief or an understanding of something`,
   definitionExpanded: ``,
-  exampleOne: `She hesitated because of her usual nervousness.`,
-  exampleTwo: `She hesitated only momentarily, which turned out to be a lifesaver.`,
-  exampleThree: `The Dutch never hesitated to speak their minds, much to the dismay of the Asians.`,
-  exampleFour: `You shouldn't hesitate to grab his attention, she advised.`,
+  exampleOne: `It was an interesting notion, though not one he was inclined to believe.`,
+  exampleTwo: `It had been an ill-concieved notion from the get-go.`,
+  exampleThree: `Maybe it's time that we flip the notion on its head.`,
+  exampleFour: `He had some rather strange nothing about women.`,
   progressTracker: 0,
 };
 
@@ -94,10 +93,10 @@ let numerous = {
   name: `Numerous`,
   definitionShort: `existing in large numbers`,
   definitionExpanded: ``,
-  exampleOne: `Mount Everest is the highest mountain the world.`,
-  exampleTwo: `Could you reach the high shelf?`,
-  exampleThree: `The price was too steep for me.`,
-  exampleFour: `Our degree of accuracy was not high enough.`,
+  exampleOne: `I could give you numerous examples.`,
+  exampleTwo: `The population wasn't quite as numerous as before the pandemic.`,
+  exampleThree: `The marketing plan was plagued with numerous setbacks.`,
+  exampleFour: `Numerous animals live in these woods.`,
   progressTracker: 0,
 };
 
@@ -105,10 +104,10 @@ let obey = {
   name: `Obey`,
   definitionShort: `to do what you are told or expected to do`,
   definitionExpanded: ``,
-  exampleOne: `You should get a hire car for the remainder of the week.`,
-  exampleTwo: `He wasn't hired, but he came pretty close.`,
-  exampleThree: `Is this vehicle for hire?`,
-  exampleFour: `New IT specialists were hired almost every day.`,
+  exampleOne: `He used to have a hard time obeying his parents.`,
+  exampleTwo: `One should always obey the orders of his superiors.`,
+  exampleThree: `Everyone, even the government, has to obey the rules.`,
+  exampleFour: `He had failed to obet traffic laws only once.`,
   progressTracker: 0,
 };
 
@@ -116,10 +115,10 @@ let object = {
   name: `Object`,
   definitionShort: `to say that you disagree with or oppose something`,
   definitionExpanded: ``,
-  exampleOne: `Hold me, I think I'm fainting!`,
-  exampleTwo: `The little girl held her father's hand tightly.`,
-  exampleThree: `A commonly held belief is that exterrestrial life does not exist.`,
-  exampleFour: `I have no idea what personal beliefs she holds.`,
+  exampleOne: `He had not managed to identify the object yet.`,
+  exampleTwo: `Price was never an object for her.`,
+  exampleThree: `He shoved an oddyellow object into her hands.`,
+  exampleFour: `The object could have been a weather balloon, he supposed.`,
   progressTracker: 0,
 };
 
@@ -127,9 +126,10 @@ let objective = {
   name: `Objective`,
   definitionShort: `something that you are trying to achieve`,
   definitionExpanded: ``,
-  exampleTwo: `I don't find hollow cheeks particularly attractive, no.`,
-  exampleThree: `A hollow laugh was all she got from him.`,
-  exampleFour: `The whole affair left a hollow feeling in my stomach.`,
+  exampleOne: `What is our objective, anyway?`,
+  exampleTwo: `He will obtain his objective someday.`,
+  exampleThree: `She didn't even know what her objective was under three weeks later.`,
+  exampleFour: `Perhaps we should reconsider our objective.`,
   progressTracker: 0,
 };
 
@@ -138,9 +138,10 @@ let obligation = {
   definitionShort: `the state of being forced to do something 
     because it is your duty, or because of a law, etc.`,
   definitionExpanded: ``,
-  exampleTwo: `Be cautious because you are on holy ground.`,
-  exampleThree: `They call Mecca a holy city.`,
-  exampleFour: `The country of Japan has more than one holy mountain.`,
+  exampleOne: `Don't you feel you have an obligation to help?`,
+  exampleTwo: `You should always fulfill your obligations`,
+  exampleThree: `I have no other obligations this weekend.`,
+  exampleFour: `We have a legl obligation to pay our income taxes.`,
   progressTracker: 0,
 };
 
@@ -149,10 +150,10 @@ let observation = {
   definitionShort: `the act of watching somebody/something carefully for a period of 
     time, especially to learn something`,
   definitionExpanded: ``,
-  exampleOne: `They can take your stuff but they can never take your honor.`,
-  exampleTwo: `He shared the honor with three of his peers.`,
-  exampleThree: `Special honours should go to the writer because they did an awesome job.`,
-  exampleFour: `They gave her the dubious honour of being cook and cleaner.`,
+  exampleOne: `They put him under observations for three more days.`,
+  exampleTwo: `He knew he could improve his observation skills.`,
+  exampleThree: `She make a couple of striking observations that afternoon.`,
+  exampleFour: `Her observations match the available evidence.`,
   progressTracker: 0,
 };
 
@@ -160,10 +161,10 @@ let observe = {
   name: `Observe`,
   definitionShort: `to see or notice somebody/something`,
   definitionExpanded: ``,
-  exampleOne: `She wants to hold a party in your honour, I believe.`,
-  exampleTwo: `China hosted the Olympics quite recently.`,
-  exampleThree: `The Hague acted as a host for the degelates.`,
-  exampleFour: `They agreed to host the conference for a quite reasonable sum.`,
+  exampleOne: `We are here to observe your kind.`,
+  exampleTwo: `I would need to observe the herd a little better.`,
+  exampleThree: `Few people observe as well as they should.`,
+  exampleFour: `They failed to observe the enemy adequatly, for they never noticed the attack.`,
   progressTracker: 0,
 };
 
@@ -171,9 +172,10 @@ let obtain = {
   name: `Obtain`,
   definitionShort: `to get something, especially by making an effort`,
   definitionExpanded: ``,
-  exampleTwo: `The household consisted of a mother, a father, a child, and a parrot.`,
-  exampleThree: `Household incomes are not increasing anymore.`,
-  exampleFour: `Household waste is one of the major problems of this city.`,
+  exampleOne: `He obtained his objective only after great struggles.`,
+  exampleTwo: `You should learn how to obtain more money.`,
+  exampleThree: `There are multiple ways to obtain that item.`,
+  exampleFour: `The wine that he had obtained was not of good quality.`,
   progressTracker: 0,
 };
 
@@ -181,10 +183,10 @@ let occasionally = {
   name: `Occasionally`,
   definitionShort: `sometimes but not often`,
   definitionExpanded: ``,
-  exampleOne: `Affordable housing is amongst our highest priorities.`,
-  exampleTwo: `I don't like to live in substandard housing.`,
-  exampleThree: `Does our city have a housing department?`,
-  exampleFour: `Is your housing public or private?`,
+  exampleOne: `He indulged in sweets only occasionally.`,
+  exampleTwo: `He succeeded occasionally, though not nearly every week.`,
+  exampleThree: `Ocassionally, she would just sit there and sulk.`,
+  exampleFour: `I did occasionally climb trees when I was young.`,
   progressTracker: 0,
 };
 
@@ -192,10 +194,10 @@ let offence = {
   name: `offence`,
   definitionShort: `​an illegal act`,
   definitionExpanded: ``,
-  exampleOne: `Everybody knows women aren't humorous, he said with a sardonic smile. `,
-  exampleTwo: `His humorous eyes made her fall in love with him.`,
-  exampleThree: `His sly sense of humor made him popular with the ladies.`,
-  exampleFour: `Her unintentionally humorous comment made her visibly nervous`,
+  exampleOne: `It was only a mild offence.`,
+  exampleTwo: `You cannot be convicted unless a judge has found you guilty of some specified offence.`,
+  exampleThree: `Never before in his life had he committed a criminal offence.`,
+  exampleFour: `That sort of offence could get you punished.`,
   progressTracker: 0,
 };
 
@@ -203,10 +205,10 @@ let offend = {
   name: `Offend`,
   definitionShort: `to make somebody feel upset because of something you say or do that is rude or embarrassing`,
   definitionExpanded: ``,
-  exampleOne: `She had always relished his sense of humor.`,
-  exampleTwo: `His sense of humor was usually tongue-in-check, which somtimes got him into trouble.`,
-  exampleThree: `Irreverent humor is not much appreciated in these parts.`,
-  exampleFour: `His sardonic sense of humor often nettled his peers.`,
+  exampleOne: `I'm sure she didn't mean to offend you.`,
+  exampleTwo: `He often wondered whether he had said anything to offend her.`,
+  exampleThree: `He often failed to keep his mouth shut, thereby offending many of those around him.`,
+  exampleFour: `She was a person not easily offended.`,
   progressTracker: 0,
 };
 
@@ -215,22 +217,21 @@ let offensive = {
   definitionShort: `rude in a way that causes somebody to feel upset or annoyed 
     because it shows a lack of respect`,
   definitionExpanded: ``,
-  exampleOne: `Hunting is fun but shooting is thrilling.`,
-  exampleTwo: `She hunted all afteroon for that perfect pair of heels.`,
-  exampleThree: `Police are still hunting for the three buglars.`,
-  exampleFour: `Caveman had to hunt for their food and so might we, 
-    if this economic crisis continues any longer.`,
-  progressTracker: 0,
+  exampleOne: `Some would find that offensive.`,
+  exampleTwo: `He didn't often say something offensive, but when he did, people noticed.`,
+  exampleThree: `His offensive remarks never failed to upset his peers.`,
+  exampleFour: `He thought the odor bordereed on offensive.,
+  progressTracker: 0`,
 };
 
 let official = {
   name: `Official`,
   definitionShort: `agreed to, said, done, etc. by somebody who is in a position of authority`,
   definitionExpanded: ``,
-  exampleOne: `Deer hunting is illegal in this part of the country.`,
-  exampleTwo: `Do leave commercial hunting to the professionals, he advised.`,
-  exampleThree: `You should go job-hunting soon because the market is about to crash.`,
-  exampleFour: `Whale hunting is illegal these days, but you should probably tell that to the Japanese.`,
+  exampleOne: `Unless this becomes official, you are merely looking at rumors.`,
+  exampleTwo: `He made it an official request.`,
+  exampleThree: `Our official engagement was five years ago to the day.`,
+  exampleFour: `My official duties start next week.`,
   progressTracker: 0,
 };
 
@@ -238,11 +239,11 @@ let opening = {
   name: `Opening`,
   definitionShort: `a space or hole that somebody/something can pass through`,
   definitionExpanded: ``,
-  exampleOne: `All she could think about was how to hurt him.`,
-  exampleTwo: `When she last spoke to him on the phone, he sounded terribly hurt.`,
-  exampleThree: `Did you hurt yourself playing tennis again?`,
-  exampleFour: `My head hurts, though probably not as much as your ankle in two minutes.`,
-  progressTracker: 0,
+  exampleOne: `The opening was narrow, but it was all that he needed`,
+  exampleTwo: `She was barely able to squeeze herself through the narrow opening.`,
+  exampleThree: `The opening comment wasn't that great, but the event became more interesting later on.`,
+  exampleFour: `Could you create an opening for me?,
+  progressTracker: 0`,
 };
 
 export default [

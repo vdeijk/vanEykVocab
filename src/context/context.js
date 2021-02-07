@@ -70,6 +70,10 @@ const AppProvider = ({ children }) => {
     dispatch({ type: "SET_ALLDATA", payload: allDataTemp });
   };
 
+  const setInitialState = () => {
+    dispatch({ type: "SET_INITIAL_STATE" });
+  };
+
   return (
     <AppContext.Provider
       value={{
@@ -82,6 +86,7 @@ const AppProvider = ({ children }) => {
         counterUpdate,
         setMastery,
         setAllData,
+        setInitialState,
       }}
     >
       {children}
